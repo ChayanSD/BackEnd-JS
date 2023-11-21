@@ -12,3 +12,7 @@
 - "dev": "nodemon src/index.js"
 ### part 2 :
 - src/ mkdir controllers db middlewares models routes utils
+- npm i express mongoose dotenv
+
+### run project with dotenv :
+`"dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"`
