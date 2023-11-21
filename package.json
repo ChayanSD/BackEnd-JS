@@ -2,14 +2,18 @@
   "name": "backend-js",
   "version": "1.0.0",
   "description": "Backend with Javascript , MongoDB , Express ...",
-  "main": "index.js",
+  "type": "module",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "backend",
     "javascript"
   ],
   "author": "ChayanSD",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
