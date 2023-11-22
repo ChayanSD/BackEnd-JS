@@ -13,6 +13,16 @@
 ### part 2 :
 - src/ mkdir controllers db middlewares models routes utils
 - npm i express mongoose dotenv
+- npm i cookie-parser cors (cors -> cross-origin resource sharing)
 
 ### run project with dotenv :
 `"dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"`
+
+
+## Project Flow
+1. connect database (db folder)
+2. define constants.js file
+3. configuration express at app.js file
+4. utils/asyncHandler.js ->
+5. utils/errorHandler.js->Handling Errors
+6. utils/ApiResponse.js -> Handling Response
