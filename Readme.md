@@ -14,6 +14,8 @@
 - src/ mkdir controllers db middlewares models routes utils
 - npm i express mongoose dotenv
 - npm i cookie-parser cors (cors -> cross-origin resource sharing)
+- npm install mongoose-aggregate-paginate-v2
+- npm install bcrypt (A library to help you hash passwords.)
 
 ### run project with dotenv :
 `"dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"`
@@ -26,3 +28,6 @@
 4. utils/asyncHandler.js ->
 5. utils/errorHandler.js->Handling Errors
 6. utils/ApiResponse.js -> Handling Response
+7. models /user.js-> create user schema and model,implement bcryptjs for password hashing.
+8. models/video.js
+9. 
