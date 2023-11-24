@@ -16,6 +16,9 @@
 - npm i cookie-parser cors (cors -> cross-origin resource sharing)
 - npm install mongoose-aggregate-paginate-v2
 - npm install bcrypt (A library to help you hash passwords.)
+- npm isntall jsonwebtoken (An implementation of JSON Web Tokens.)
+- npm install cloudinary (Cloudinary is a cloud service that offers a solution to a web application's entire image management pipeline.)
+- npm install multer (Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files.)
 
 ### run project with dotenv :
 `"dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"`
@@ -30,4 +33,4 @@
 6. utils/ApiResponse.js -> Handling Response
 7. models /user.js-> create user schema and model,implement bcryptjs for password hashing.
 8. models/video.js
-9. 
+9. setup the cloudinary
