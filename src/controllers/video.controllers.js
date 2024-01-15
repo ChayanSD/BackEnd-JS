@@ -57,8 +57,39 @@ const publishAVideo = asyncHandler(async (req, res) => {
     )
 });
 
+const getVideoById = asyncHandler(async (req, res) => {
+    const { videoId } = req.params
+    if (!videoId){
+        throw new ApiError(400,"Video id is not here")
+    }
+   const video = await Video.findById(videoId).populate('owner','username avatar')
+    if (!video){
+        throw new ApiError(404,"Video not found")
+    }
+    return res.status(200).json(
+        new ApiResponse(200,video,"Video found")
+    )
+
+})
+
+const updateVideo = asyncHandler(async (req, res) => {
+    const { videoId } = req.params
+    //TODO: update video details like title, description, thumbnail
+
+})
+
+const deleteVideo = asyncHandler(async (req, res) => {
+    const { videoId } = req.params
+    //TODO: delete video
+
+})
+
+const togglePublishStatus = asyncHandler(async (req, res) => {
+    const { videoId } = req.params
+})
 
 export {
     getAllVideos,
     publishAVideo,
+    getVideoById,
 }
