@@ -1,5 +1,5 @@
 import {Router} from "express";
-import {getVideoById, publishAVideo} from "../controllers/video.controllers.js";
+import {deleteVideo, getVideoById, publishAVideo} from "../controllers/video.controllers.js";
 import {upload} from "../middlewares/multer.middleware.js";
 import {verifyJWT} from "../middlewares/auth.middleware.js";
 
@@ -22,6 +22,8 @@ router.route("/").post(
         )
 ,publishAVideo);
 
-router.route("/:videoId").get(getVideoById);
+router.route("/:videoId")
+    .delete(deleteVideo)
+    .get(getVideoById);
 
 export default router;
